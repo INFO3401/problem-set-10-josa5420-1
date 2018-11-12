@@ -1,4 +1,4 @@
-""""from sklearn.linear_model import LinearRegression
+"""from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import LogisticRegression
 
 from sklearn.metrics import r2_score
@@ -117,6 +117,8 @@ log.runMultipleRegression(AD1)
 #                        + 0.49783674 x5 - 0.47591613 x6 + 0.81511886 x7 - 0.59971553 x8 - 0.2581028 x9  
 #                        + 0.3224988 x10 + 0.05387906 x11
 
+# NOTE: x variables 1-11 correspond to ['fruity', 'caramel', 'peanutyalmondy', 'nougat', 'crispedricewafer', 'hard', 'bar', 'pluribus', 'sugarpercent', 'pricepercent', 'winpercent']
+
 
 
 
@@ -128,20 +130,23 @@ log.runMultipleRegression(AD1)
 #the dependent variable and its type, and the null hypothesis for each of the following scenarios: 
 
 #(a) What candies contain more sugar, those with caramel or those with chocolate?
+
 #      Independent variable: Type of Candy
 #      Dependent variable:   Amount of Sugar
 #      Null Hypothesis:      Both Caramel and Chocolate candies contain the same amount of sugar.
 
 #(b) Are there more split ticket voters in blue states or red states? 
+
 #      Independent variable: Color of state
 #      Dependent variable:   Amount of split ticket voters
 #      Null Hypothesis:      Red and Blue states have the same amount of split ticket voters.
 
 
 #(c) Do phones with longer battery life sell at a higher or lower rate than other phones?
+
 #      Independent variable: Type of phone
 #      Dependent variable:   Selling rate
 #      Null Hypothesis:      Phones with longer battery life sell at the same rate as other phones.
 
 
-""""
+"""
