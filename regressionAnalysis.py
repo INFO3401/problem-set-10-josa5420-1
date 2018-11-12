@@ -74,12 +74,7 @@ class LogisticAnalysis: #will contain your functions for doing logistic regressi
 df = pd.read_csv('candy-data.csv')
 AD1 = AnalysisData(df)
 
-AD1.setTargetY('chocolate')
-lin = LinearAnalysis(AD1.targetY)
-lin.runSimpleAnalysis(AD1)
-AD1.setTargetY('chocolate')
-log = LogisticAnalysis(AD1.targetY)
-log.runSimpleAnalysis(AD1)
+
 
 #1. Add a function to the LogisticAnalysis object called runSimpleAnalysis. 
 #This function should take in an AnalysisData object as a parameter and should use 
@@ -87,6 +82,12 @@ log.runSimpleAnalysis(AD1)
 #using logistic regression. Print the variable name and the resulting fit. Do the two 
 #functions find the same optimal variable? Which method best fits this data? Make sure
 # your best predictor is NOT the same as the targetY variable. 
+
+AD1.setTargetY('chocolate')
+lin = LinearAnalysis(AD1.targetY)
+lin.runSimpleAnalysis(AD1)
+log = LogisticAnalysis(AD1.targetY)
+log.runSimpleAnalysis(AD1)
 
 #runSimpleAnalysis for both linear and logistic regression find the same variable, 'fruity', optimal for
 #predicting whether a candy is chocolate or not. Linear regression has a better fit, at ~.5502
@@ -131,21 +132,21 @@ log.runMultipleRegression(AD1)
 
 #(a) What candies contain more sugar, those with caramel or those with chocolate?
 
-#      Independent variable: Type of Candy
-#      Dependent variable:   Amount of Sugar
+#      Independent variable: Type of Candy. Categorical variables.
+#      Dependent variable:   Amount of Sugar. Continuous variable.
 #      Null Hypothesis:      Both Caramel and Chocolate candies contain the same amount of sugar.
 
 #(b) Are there more split ticket voters in blue states or red states? 
 
-#      Independent variable: Color of state
-#      Dependent variable:   Amount of split ticket voters
+#      Independent variable: Color of state. Categorical Variable.
+#      Dependent variable:   Amount of split ticket voters. Discrete Variable.
 #      Null Hypothesis:      Red and Blue states have the same amount of split ticket voters.
 
 
 #(c) Do phones with longer battery life sell at a higher or lower rate than other phones?
 
-#      Independent variable: Type of phone
-#      Dependent variable:   Selling rate
+#      Independent variable: Type of phone. Categorical Variable.
+#      Dependent variable:   Selling rate. Continuous Variable.
 #      Null Hypothesis:      Phones with longer battery life sell at the same rate as other phones.
 
 
